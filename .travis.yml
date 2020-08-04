@@ -3,5 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t demidesigns/node .
-  - docker images demidesigns/node
+  - docker build -t demidesigns/hello-cicd .
+  - docker images demidesigns/hello-cicd
+
+#before_deploy:
+#  - docker login -u <username> -p <password>
+#
+#deploy:
+#  provider: script
+#  script: docker push demidesigns/node
+#  on:
+#    branch: master
